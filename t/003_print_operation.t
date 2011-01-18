@@ -28,14 +28,14 @@ my @list = (
 );
 
 
-$doc->build(sub {
-    my ($doc, $context) = @_;
-    
+#$doc->build(sub {
+#    my ($doc, $context) = @_;
+#    
     for my $entry (@list) {
         my $page = $doc->new_page;
         my $text = $page->new_text( content => join ' | ', @$entry );
     }
-});
+#});
 
 my $surface = Lorum::Surface::PrintOperation->new(gtk_window => Gtk2::Window->new );
 $surface->print( $doc );

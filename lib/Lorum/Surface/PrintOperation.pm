@@ -38,7 +38,7 @@ method print ( $doc ) {
         $doc->set_height( $print_context->get_height - 36);
         
         
-        &{$doc->builder_func}( $doc, $cr );
+        #&{$doc->builder_func}( $doc, $cr );
         
         my @pages = @{$doc->children};
         $po->set_n_pages( scalar @pages );

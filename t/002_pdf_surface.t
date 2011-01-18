@@ -28,17 +28,19 @@ my @list = (
 );
 
 
-$doc->build(sub {
-    my ($doc, $context) = @_;
+#$doc->build(sub {
+#    my ($doc, $context) = @_;
     
     for my $entry (@list) {
         my $page = $doc->new_page;
         my $text = $page->new_text( content => join ' | ', @$entry );
     }
-});
+#});
 
 my $surface = Lorum::Surface::Pdf->new(file_name => 't/output/pdf_surface.pdf', width => in2pt(8.5), height => in2pt(11) );
-$surface->print( $doc );
 ok $surface, 'surface ok';
+
+$surface->print( $doc );
+
 
 

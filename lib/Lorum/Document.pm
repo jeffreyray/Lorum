@@ -122,5 +122,51 @@ method draw_page ( $cr, Int $i ) {
     $self->children->[$i]->imprint( $cr );
 }
 
-
 1;
+
+
+__END__
+
+=pod
+
+=head1 NAME
+
+Lorum::Document - Document root class
+
+=head1 SYNOPSIS
+
+  use Lorum;
+
+  $doc = Lorum->new_document;
+
+  $page = $doc->new_page;
+
+  $page->new_text( content => 'Lorum Ipsum' );
+
+
+=head1 DESCRIPTION
+
+L<Lorum::Document> is the root element of a document.
+
+=head1 METHODS
+
+=over 4
+
+=item new_page
+
+Returns a new L<Lorum::Element::Page> object.
+
+=back
+
+=head1 AUTHOR
+
+Jeffrey Ray Hallock E<lt>jeffrey.hallock at gmail dot comE<gt>
+
+=head1 COPYRIGHT
+
+    Copyright (c) 2010 Jeffrey Ray Hallock. All rights reserved.
+    This program is free software; you can redistribute it and/or
+    modify it under the same terms as Perl itself.
+
+=cut
+

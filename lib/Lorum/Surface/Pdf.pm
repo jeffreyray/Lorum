@@ -32,7 +32,7 @@ method print ( $doc ) {
     $doc->set_height( $self->height );
     my $cr = Cairo::Context->create( $surface );
 
-    &{$doc->builder_func}( $doc, $cr );
+    #&{$doc->builder_func}( $doc, $cr );
     
     my @pages = @{$doc->children};
 
